@@ -21,6 +21,7 @@ const Summary = ({users, dataAcademica, viewComponent}) => {
     }
 
     const handleSubmit= async (event)=> {
+        event.preventDefault();
         try {
         const data = {
             name: users[0].name,
@@ -45,6 +46,7 @@ const Summary = ({users, dataAcademica, viewComponent}) => {
         
         if(response.status === 201){
             navigate('/tableregister');
+            
         }
         } catch (error) {
             console.log(error);
