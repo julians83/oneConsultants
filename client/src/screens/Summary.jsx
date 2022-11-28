@@ -21,7 +21,6 @@ const Summary = ({users, dataAcademica, viewComponent}) => {
     }
 
     const handleSubmit= async (event)=> {
-        event.preventDefault();
         try {
         const data = {
             name: users[0].name,
